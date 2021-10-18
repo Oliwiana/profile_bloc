@@ -1,0 +1,22 @@
+final String dogImg11 = 'create_dog_11.png';
+final String dogImg10 = 'create_dog_10.png';
+final String dogImg1 = 'dog_img_1.png';
+final String dogImg2 = 'dog_img_2.png';
+final String dogImg3 = 'dog_img_3.png';
+final String dogImg4 = 'dog_img_4.png';
+final String dogImg5 = 'dog_img_5.png';
+final String dogImg6 = 'dog_img_6.png';
+final String dogImg7 = 'dog_img_7.png';
+final String dogImgExtraAll = 'dog_img_extra_all.png';
+final String profileImg9 = 'profile_img_9.png';
+final String profileImg8 = 'profile_img_8.png';
+final String homeImg12 = 'home_12.png';
+final String homeImg13 = 'home_13.png';
+final String homeImg14 = 'home_14.png';
+final String homeImg15 = 'home_15.png';
+final String homeImg16 = 'home_16.png';
+final String homeImg17 ='home_17.png';
+final String dogLogo = 'dog_logo.png';
+final String orangeSmallLogo= 'orange_small_logo.png';
+final String whiteSmallLogo= 'white_small_logo.png';
+

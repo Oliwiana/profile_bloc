@@ -1,0 +1,21 @@
+import 'package:flutter/material.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
+
+final IconData checkIcon = Icons.check;
+final IconData maleIcon = Icons.male;
+final IconData femaleIcon = Icons.female;
+final IconData arrowIcon = Icons.arrow_right_alt;
+final IconData arrowBackIcon = Icons.arrow_back_ios;
+final IconData downloadIcon = Icons.download;
+final IconData photoIcon = Icons.photo;
+final IconData cameraIcon = Icons.photo_camera;
+final IconData editIcon = Icons.edit;
+final IconData addIcon = Icons.add;
+final IconData petIcon = Icons.pets;
+final IconData closeIcon = Icons.close;
+final IconData searchIcon = Icons.search_outlined;
+final IconData personIcon = Icons.person_outline;
+final IconData userIcon = FontAwesomeIcons.user;
+final IconData arrowRightIcon = FontAwesomeIcons.arrowRight;
+final IconData favoriteIcon = Icons.favorite_border;
+final IconData calendarIcon = Icons.calendar_today_sharp;
