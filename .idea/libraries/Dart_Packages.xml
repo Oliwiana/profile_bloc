@@ -135,6 +135,13 @@
             </list>
           </value>
         </entry>
+        <entry key="formz">
+          <value>
+            <list>
+              <option value="$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/formz-0.4.1/lib" />
+            </list>
+          </value>
+        </entry>
         <entry key="http">
           <value>
             <list>
@@ -357,6 +364,7 @@
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/flutter_plugin_android_lifecycle-2.0.3/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/flutter_svg-0.23.0+1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/font_awesome_flutter-9.1.0/lib" />
+      <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/formz-0.4.1/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/http-0.13.3/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0/lib" />
       <root url="file://$PROJECT_DIR$/../.pub-cache/hosted/pub.dartlang.org/image_picker-0.8.4+1/lib" />

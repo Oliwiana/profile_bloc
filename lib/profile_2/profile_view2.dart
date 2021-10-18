@@ -113,6 +113,7 @@ class ProfileView5 extends StatelessWidget {
   // }
 
   Widget _saveProfileChangesButton(BuildContext context) {
+    // buildWhen: (previous, current) => previous.status != current.status,
     return BlocBuilder<Profile2Bloc, Profile2State>(builder: (context, state) {
       return
           //

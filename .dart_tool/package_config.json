@@ -116,6 +116,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "formz",
+      "rootUri": "file:///Users/oliwiabrewko/.pub-cache/hosted/pub.dartlang.org/formz-0.4.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///Users/oliwiabrewko/.pub-cache/hosted/pub.dartlang.org/http-0.13.3",
       "packageUri": "lib/",
@@ -296,7 +302,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2021-10-18T08:28:43.698653Z",
+  "generated": "2021-10-18T09:31:47.569933Z",
   "generator": "pub",
   "generatorVersion": "2.13.4"
 }
