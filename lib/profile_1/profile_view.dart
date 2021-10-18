@@ -1,7 +1,7 @@
 import 'package:app/components/buttons/custom_button_big.dart';
 import 'package:app/components/buttons/custom_form_field.dart';
 import 'package:app/components/icons/all_icons.dart';
-import 'package:app/components/text/all_text.dart';
+
 import 'package:app/components/theme/colors.dart';
 import 'package:app/profile_2/profile_view2.dart';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
@@ -90,7 +90,7 @@ class ProfileView extends StatelessWidget {
         colour: Colors.black,
         // helperText: helperTextRegion,
         keyboardType: TextInputType.name,
-        labelText: labelTextCity,
+        labelText: 'city',
         onChanged: (value) => context.read<ProfileBloc>().add(
               ProfileCityChanged(city: value),
             ),
@@ -120,7 +120,7 @@ class ProfileView extends StatelessWidget {
           size: 25,
           color: Colors.white,
         ),
-        title: buttonChange,
+        title: 'change',
         textColor: Colors.white,
         colour: teal,
       );

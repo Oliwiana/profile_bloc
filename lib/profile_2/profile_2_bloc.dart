@@ -1,7 +1,7 @@
 import 'dart:async';
 
 
-import 'package:app/components/text/all_text.dart';
+
 
 import 'package:bloc/bloc.dart';
 import 'package:meta/meta.dart';

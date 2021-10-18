@@ -6,7 +6,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 
 import '../components/buttons/custom_button_small.dart';
 import '../components/icons/all_icons.dart';
-import '../components/text/all_text.dart';
+
 import '../components/theme/colors.dart';
 import '../last_screen.dart';
 
@@ -132,7 +132,7 @@ class ProfileView5 extends StatelessWidget {
                 size: 0,
                 color: Colors.white,
               ),
-              title: ButtonSkip,
+              title: 'skip',
               textColor: teal,
               colour1: teal,
               colour2: scaffold_color,
@@ -148,7 +148,7 @@ class ProfileView5 extends StatelessWidget {
                 size: 25,
                 color: Colors.white,
               ),
-              title: buttonChange,
+              title: 'change',
               textColor: Colors.white,
               colour: teal,
             ),
