@@ -1,33 +1,25 @@
 import 'dart:async';
 
-
-
-
 import 'package:bloc/bloc.dart';
-import 'package:meta/meta.dart';
 
+part 'profile_event.dart';
+part 'profile_state.dart';
 
-part 'profile_2_event.dart';
-
-part 'profile_2_state.dart';
-
-class Profile2Bloc extends Bloc<Profile2Event, Profile2State> {
+class ProfileBloc extends Bloc<ProfileEvent, ProfileState> {
 //   final DataRepository dataRepo;
 // User? user;
 //   String ?get userCity => user!.city;
 //   String? get userName1 => user!.name;
 
-  Profile2Bloc(
-      {required bool isCurrentUser, })
-      : super(Profile2State( isCurrentUser: isCurrentUser));
+  ProfileBloc({
+    required bool isCurrentUser,
+  }) : super(ProfileState(isCurrentUser: isCurrentUser));
 
   @override
-  Stream<Profile2State> mapEventToState(Profile2Event event) async* {
+  Stream<ProfileState> mapEventToState(ProfileEvent event) async* {
     if (event is ProfileDescriptionChanged) {
       yield state.copyWith(userDescription: event.description);
-    } else if (event is SaveProfile2Changes) {
-
-
+    } else if (event is ProfileChangesSaved) {
       // final updatedUser =
       // state.user!.copyWith(city: state.userCity, name: state.userName1);
       //

@@ -3,43 +3,46 @@ import 'package:app/components/buttons/custom_form_field.dart';
 import 'package:app/components/icons/all_icons.dart';
 
 import 'package:app/components/theme/colors.dart';
-import 'package:app/profile_2/profile_view2.dart';
+import 'package:app/profile/profile_view.dart';
 import 'package:colorful_safe_area/colorful_safe_area.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'profile_bloc.dart';
-import 'profile_event.dart';
-import 'profile_state.dart';
+import 'sign_up_bloc.dart';
+import 'sign_up_event.dart';
+import 'sign_up_state.dart';
 
-class ProfileView extends StatelessWidget {
+class SignUpView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     // final sessionCubit = context.read<SessionCubit>();
     bool isCurrentUserSelected = true;
     return BlocProvider(
-        create: (context) => ProfileBloc(isCurrentUser: isCurrentUserSelected),
-        child: BlocListener<ProfileBloc, ProfileState>(
-            listener: (context, state) {
-              //     if (state.status.isSubmissionFailure) {
-              //       ScaffoldMessenger.of(context)
-              //         ..hideCurrentSnackBar()
-              //         ..showSnackBar(
-              //           const SnackBar(content: Text('Authentication Failure')),
-              //         );
-              //
-              // }
-            },
-            child: ColorfulSafeArea(
-                color: Colors.orange,
-                child: Scaffold(
-                  body: _profilePage(),
-                ))));
+      create: (context) => SignUpBloc(isCurrentUser: isCurrentUserSelected),
+      child: BlocListener<SignUpBloc, SignUpState>(
+        listener: (context, state) {
+          //     if (state.status.isSubmissionFailure) {
+          //       ScaffoldMessenger.of(context)
+          //         ..hideCurrentSnackBar()
+          //         ..showSnackBar(
+          //           const SnackBar(content: Text('Authentication Failure')),
+          //         );
+          //
+          // }
+        },
+        child: ColorfulSafeArea(
+          color: Colors.orange,
+          child: Scaffold(
+            body: _profilePage(),
+          ),
+        ),
+      ),
+    );
   }
 
   Widget _profilePage() {
-    return BlocBuilder<ProfileBloc, ProfileState>(builder: (context, state) {
+    return BlocBuilder<SignUpBloc, SignUpState>(builder: (context, state) {
       return SafeArea(
         child: Center(
           child: Column(
@@ -60,7 +63,7 @@ class ProfileView extends StatelessWidget {
   }
 
   Widget _nameTile() {
-    return BlocBuilder<ProfileBloc, ProfileState>(builder: (context, state) {
+    return BlocBuilder<SignUpBloc, SignUpState>(builder: (context, state) {
       return CustomTextField(
         title: 'Name',
         obscureText: false,
@@ -68,8 +71,8 @@ class ProfileView extends StatelessWidget {
         // helperText: helperTextUsername,
         keyboardType: TextInputType.name,
         labelText: '',
-        onChanged: (value) => context.read<ProfileBloc>().add(
-              ProfileNameChanged(name: value),
+        onChanged: (value) => context.read<SignUpBloc>().add(
+              SignUpNameChanged(name: value),
             ),
         // readOnly: !state.isCurrentUser,
         // toolbarOptions: ToolbarOptions(
@@ -83,36 +86,38 @@ class ProfileView extends StatelessWidget {
   }
 
   Widget _cityTile() {
-    return BlocBuilder<ProfileBloc, ProfileState>(builder: (context, state) {
-      return CustomTextField(
-        title: 'City',
-        obscureText: false,
-        colour: Colors.black,
-        // helperText: helperTextRegion,
-        keyboardType: TextInputType.name,
-        labelText: 'city',
-        onChanged: (value) => context.read<ProfileBloc>().add(
-              ProfileCityChanged(city: value),
-            ),
-        // readOnly: !state.isCurrentUser,
-        // toolbarOptions: ToolbarOptions(
-        //   copy: state.isCurrentUser,
-        //   cut: state.isCurrentUser,
-        //   paste: state.isCurrentUser,
-        //   selectAll: state.isCurrentUser,
-        // )
-      );
-    });
+    return BlocBuilder<SignUpBloc, SignUpState>(
+      builder: (context, state) {
+        return CustomTextField(
+          title: 'City',
+          obscureText: false,
+          colour: Colors.black,
+          // helperText: helperTextRegion,
+          keyboardType: TextInputType.name,
+          labelText: 'city',
+          onChanged: (value) => context.read<SignUpBloc>().add(
+                SignUpCityChanged(city: value),
+              ),
+          // readOnly: !state.isCurrentUser,
+          // toolbarOptions: ToolbarOptions(
+          //   copy: state.isCurrentUser,
+          //   cut: state.isCurrentUser,
+          //   paste: state.isCurrentUser,
+          //   selectAll: state.isCurrentUser,
+          // )
+        );
+      },
+    );
   }
 
   Widget _saveProfileChangesButton() {
-    return BlocBuilder<ProfileBloc, ProfileState>(builder: (context, state) {
+    return BlocBuilder<SignUpBloc, SignUpState>(builder: (context, state) {
       return
           // (state.formStatus is FormSubmitting)
           //   ? CircularProgressIndicator()
           CustomButtonBig(
         onPressed: () async {
-          context.read<ProfileBloc>().add(SaveProfileChanges());
+          context.read<SignUpBloc>().add(SignUpChangesSaved());
           await Navigator.of(context).push<void>(ProfileView5.route());
         },
         icon: Icon(

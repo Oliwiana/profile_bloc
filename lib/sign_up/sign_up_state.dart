@@ -1,4 +1,4 @@
-class ProfileState {
+class SignUpState {
   final bool isCurrentUser;
   final String avatarPath;
   final String? userCity;
@@ -12,7 +12,7 @@ class ProfileState {
 
   // final FormSubmissionStatus formStatus;
 
-  ProfileState({
+  SignUpState({
     required bool isCurrentUser,
     String? avatarPath,
     String? userCity,
@@ -23,12 +23,12 @@ class ProfileState {
         this.userCity = userCity ?? '',
         this.userName1 = userName1 ?? '';
 
-  ProfileState copyWith({
+  SignUpState copyWith({
     String? avatarPath,
     String? userCity,
     String? userName1,
   }) {
-    return ProfileState(
+    return SignUpState(
         isCurrentUser: this.isCurrentUser,
         avatarPath: avatarPath ?? this.avatarPath,
         userCity: userCity ?? this.userCity,
