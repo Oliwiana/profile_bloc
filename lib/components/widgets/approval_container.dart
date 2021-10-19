@@ -85,33 +85,33 @@ class ApprovalIcon extends StatelessWidget {
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
       return Center(
-          child: ListView(
-            scrollDirection: Axis.vertical,
-            shrinkWrap: true,
-            physics: ScrollPhysics(),
+        child: ListView(
+          scrollDirection: Axis.vertical,
+          shrinkWrap: true,
+          physics: ScrollPhysics(),
 
-            // mainAxisSize : MainAxisSize.min,
-            children: <Widget>[
-              Padding(
-                padding: EdgeInsets.symmetric(vertical: 1),
-                child: CircleAvatar(
-                  radius: 30,
-                  backgroundColor: backgroundColor,
-                  child: IconButton(
-                    icon: Text(
-                      title!,
-                      style: TextStyle(
-                          color: Colors.white,
-                          fontSize: 35.sp,
-                          fontWeight: FontWeight.bold,
-                          fontStyle: FontStyle.italic),
-                    ),
-                    onPressed: onPressed,
+          // mainAxisSize : MainAxisSize.min,
+          children: <Widget>[
+            Padding(
+              padding: EdgeInsets.symmetric(vertical: 1),
+              child: CircleAvatar(
+                radius: 30,
+                backgroundColor: backgroundColor,
+                child: IconButton(
+                  icon: Text(
+                    title!,
+                    style: TextStyle(
+                        color: Colors.white,
+                        fontSize: 35.sp,
+                        fontWeight: FontWeight.bold,
+                        fontStyle: FontStyle.italic),
                   ),
+                  onPressed: onPressed,
                 ),
               ),
-            ],
-          ),
+            ),
+          ],
+        ),
       );
     });
   }
@@ -138,16 +138,17 @@ class IconCheck extends StatelessWidget {
     );
   }
 }
-class textUnder extends StatelessWidget {
-  final String text;
 
-  textUnder({required this.text});
+class TextUnder extends StatelessWidget {
+  TextUnder({required this.text});
+
+  final String text;
 
   @override
   Widget build(BuildContext context) {
     return Sizer(builder: (context, orientation, deviceType) {
-    return Center(
-      child: ListView(
+      return Center(
+        child: ListView(
           children: <Widget>[
             Padding(
               padding: EdgeInsets.symmetric(vertical: 70.h),
@@ -166,8 +167,7 @@ class textUnder extends StatelessWidget {
             ),
           ],
         ),
-
-    );
+      );
     });
-}
+  }
 }

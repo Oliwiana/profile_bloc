@@ -28,9 +28,7 @@ class _MyAppState extends State<MyApp> {
         theme: ThemeData(
             brightness: Brightness.light,
             primaryColor: scaffold_color,
-            accentColor: Colors.grey,
-            fontFamily: 'Nunito',
-            buttonColor: teal,
+            fontFamily: 'Nunito', colorScheme: ColorScheme.fromSwatch().copyWith(secondary: Colors.grey),
             // textTheme: TextTheme(
             //   headline1: TextStyle(fontSize: 72.0, fontWeight: FontWeight.bold),
             //   headline6: TextStyle(fontSize: 36.0, fontStyle: FontStyle.italic),
